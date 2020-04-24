@@ -45,8 +45,8 @@ class Game {
         if (event.type == "click" && event.target.className == "key") {
             this.applyChoosenLetter(event.target)
         };
-        if (event.type == "keyup" && /^[a-z]$/.test(event.key)) {
-            const letter = event.key;
+        if (event.type == "keyup" && /^[a-zA-Z]$/.test(event.key)) {
+            const letter = event.key.toLowerCase();
             const buttons = Array.from(document.querySelectorAll('div.keyrow button'));
             const activeButton = buttons.filter(button => button.textContent === letter)[0];
             if (activeButton.className == "key") { 
