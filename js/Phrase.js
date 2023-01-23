@@ -18,7 +18,7 @@ class Phrase {    /**
         for (let i = 0; i < this.phrase.length; i += 1) {
             const letter = this.phrase[i];
             if (letter == ' ') {
-                html += '<li class="space"> </li>';
+                html += '</ul><li class="space">  </li><ul>';
             } else {
                 html += `<li class="hide letter ${letter}">${letter}</li>`;
             };
