@@ -89,6 +89,10 @@ button:hover {
   padding: 10px;
 }
 
+#phrase ul {
+  white-space: nowrap;
+}
+
 #phrase ul li{
   margin-top: 15px;
 }
