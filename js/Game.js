@@ -65,7 +65,7 @@ class Game {
             button.classList.add("chosen");
             this.activePhrase.showMatchedLetter(letter);
             if (this.checkForWin()) {
-                this.gameOver(true);
+                setTimeout(() => this.gameOver(true), 2000);
             };
         } else {
             button.classList.add("wrong");
@@ -92,8 +92,8 @@ class Game {
      */
     checkForWin() {
         const divPhrase = document.getElementById("phrase");
-        const listLI = Array.from(divPhrase.firstElementChild.children);
-        return listLI.every(li => li.classList.contains("show") || li.classList.contains("space"))
+        const listLI = Array.from(document.querySelectorAll(".letter"));
+        return listLI.every(li => li.classList.contains("show"))
     };
     
     /**
